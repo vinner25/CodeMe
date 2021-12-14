@@ -1,14 +1,13 @@
 package com.vinner.codeme;
 
-import com.vinner.codeme.projecteuler.NthPrimeNumber;
-import com.vinner.codeme.projecteuler.SmallestMultiple;
-import com.vinner.codeme.projecteuler.SumSquareDifference;
+import com.vinner.codeme.projecteuler.LargestProductInSeries;
+import com.vinner.codeme.projecteuler.SpecialPythagorasTriplet;
 
 public class DriverProgram {
 
     public static void main(String args[])
     {
-        NthPrimeNumber mp = new NthPrimeNumber();
+        SpecialPythagorasTriplet mp = new SpecialPythagorasTriplet();
 
         System.out.println(mp.execute());
     }
