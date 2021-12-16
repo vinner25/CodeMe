@@ -12,6 +12,16 @@ public class BinaryTreeNode<T> {
     private BinaryTreeNode<T> leftNode;
     private BinaryTreeNode<T> rightNode;
 
+    public BinaryTreeNode (T value)
+    {
+        this.value = value;
+    }
+    public BinaryTreeNode()
+    {
+
+    }
+
+
     public T getValue() {
         return value;
     }
