@@ -18,7 +18,8 @@ import java.util.Arrays;
  * Input: arr1 = [28,6,22,8,44,17], arr2 = [22,28,8,6]
  * Output: [22,28,8,6,17,44]
  */
-public class ArrayProblem {
+//Brute Force but works
+public class ArrayShuffleProblem {
 
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
 
@@ -27,25 +28,42 @@ public class ArrayProblem {
         int currentIndex = 0;
         for(int i : arr2)
         {
+            String valueToIndexSize = getIndexSize(i,arr1);
+            int startIndex = Integer.parseInt(valueToIndexSize.split("-")[0]);
+            int size = Integer.parseInt(valueToIndexSize.split("-")[1]);
+
             //Shuffle Required
             if(arr1[currentIndex] != i)
             {
-                String valueToIndexSize = getIndexSize(i,arr1);
-                int startIndex = Integer.parseInt(valueToIndexSize.split("-")[0]);
-                int size = Integer.parseInt(valueToIndexSize.split("-")[1]);
-
-                while(currentIndex < currentIndex+size)
+                int max = startIndex+size;
+                while(startIndex < max)
                 {
                     int currentValue = arr1[currentIndex];
-
+                    arr1[currentIndex] = arr1[startIndex];
+                    arr1[startIndex] = currentValue;
+                    startIndex++;
+                    currentIndex++;
                 }
-
-
+            }
+            else
+            {
+                currentIndex = currentIndex + size;
             }
 
         }
+        int[] temp = new int[arr1.length];
+        for(int i= currentIndex ; i<arr1.length; i++)
+        {
+            temp[i] = arr1[i];
+        }
+        Arrays.sort(temp);
+        for(int i= currentIndex ; i<arr1.length; i++)
+        {
+            arr1[i]=   temp[i] ;
+        }
 
 
+        return arr1;
 
 
 
@@ -61,7 +79,7 @@ public class ArrayProblem {
             if(arr1[i] == n)
             {
                 if(startIndex < 0)
-                    startIndex = i
+                    startIndex = i;
                 size++;
 
             }
@@ -71,7 +89,19 @@ public class ArrayProblem {
         }
 
         indexAndSize.append(startIndex).append("-").append(size);
-        return indexAndSize;
+        return indexAndSize.toString();
 
+    }
+
+    public static void main(String args[])
+    {
+        //[]
+        //[]
+
+
+        int arr1[] = new int[]{33,22,48,4,39,36,41,47,15,45};
+        int arr2[] = new int[]{22,33,48,4};
+        ArrayShuffleProblem ap = new ArrayShuffleProblem();
+        ap.relativeSortArray(arr1,arr2);
     }
 }
