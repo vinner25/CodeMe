@@ -1,6 +1,7 @@
 package com.vinner.codeme.ds.trees.problems;
 
 import com.vinner.codeme.ds.trees.BinaryTreeNode;
+import com.vinner.codeme.ds.trees.BinaryTreeUtil;
 
 public class BalancedBinaryTree {
 class SubTreeDetails{
@@ -48,7 +49,7 @@ class SubTreeDetails{
         {
             SubTreeDetails leftSubTreeDetails = checkBalanced(node.getLeftNode());
             if(!leftSubTreeDetails.isBalanced())
-                return new SubTreeDetails(false, 0);
+                return new SubTreeDetails(false, 0); //If Left Sub Tree is not balanced itself, no need to iterate right
             SubTreeDetails rightSubTreeDetails = checkBalanced(node.getRightNode());
             int height = 1+ Math.max(leftSubTreeDetails.getHeight(), rightSubTreeDetails.getHeight());
             if(!leftSubTreeDetails.isBalanced() || !rightSubTreeDetails.isBalanced())
@@ -56,6 +57,18 @@ class SubTreeDetails{
             else
                 return  new SubTreeDetails( Math.abs(leftSubTreeDetails.getHeight() - rightSubTreeDetails.getHeight()) <= 1 ? true: false, height);
         }
+    }
+
+
+    public static  void main(String args[])
+    {
+        BalancedBinaryTree balancedBinaryTree = new BalancedBinaryTree();
+
+        BinaryTreeNode<Integer> binaryTreeNode = BinaryTreeUtil.generateIntegerBinaryTree();
+
+        System.out.println(balancedBinaryTree.isBalanced(binaryTreeNode));
+        System.out.println(balancedBinaryTree.isBalanced( BinaryTreeUtil.generateUnBalancedIntegerBinaryTree()));
+
 
     }
 
