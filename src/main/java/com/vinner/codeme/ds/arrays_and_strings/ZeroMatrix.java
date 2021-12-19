@@ -1,4 +1,4 @@
-package com.vinner.codeme.ds.arrays;
+package com.vinner.codeme.ds.arrays_and_strings;
 /*
 Give a M*N Matrix, Set the respective Row and Column to Zero if element is Zero
  */

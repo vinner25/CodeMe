@@ -1,4 +1,4 @@
-package com.vinner.codeme.ds.arrays;
+package com.vinner.codeme.ds.arrays_and_strings;
 
 /**
  *  Given Two Strings , Find if they are only edit away from each other.

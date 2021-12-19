@@ -1,4 +1,4 @@
-package trees;
+package trees.problems;
 
 import com.vinner.codeme.ds.trees.problems.ValidBST;
 import org.junit.Assert;

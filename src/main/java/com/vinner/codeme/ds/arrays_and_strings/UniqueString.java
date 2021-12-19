@@ -1,4 +1,4 @@
-package com.vinner.codeme.ds.arrays;
+package com.vinner.codeme.ds.arrays_and_strings;
 
 /**
  *  Write an algo to determine if a string has all unique characters

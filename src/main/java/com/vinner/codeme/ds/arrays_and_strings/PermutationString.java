@@ -1,4 +1,4 @@
-package com.vinner.codeme.ds.arrays;
+package com.vinner.codeme.ds.arrays_and_strings;
 
 /**
  * Given Two Strings , Find if a String is a permutation of another
