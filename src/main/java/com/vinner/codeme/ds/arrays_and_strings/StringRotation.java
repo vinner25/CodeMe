@@ -21,11 +21,8 @@ public class StringRotation {
 
         if(s1.length() != s2.length())
             return false;
-
         String s3= s2+s2;
-
         return  isSubstring(s3,s2);
-
     }
 
     private boolean isSubstring(String s1, String s2)
