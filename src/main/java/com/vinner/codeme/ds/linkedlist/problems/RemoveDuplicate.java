@@ -13,6 +13,12 @@ public class RemoveDuplicate implements ProblemStatement {
                 " \n Follow Up" +
                 " \n How to remove if there is no extra buffer available?" ;
     }
+
+    @Override
+    public String getSolutionNotes() {
+        return null;
+    }
+
     /*
         Iterate over on eelement at a time and maintain a Set of visited values
         If Dup found remove the dup node
@@ -66,5 +72,7 @@ public class RemoveDuplicate implements ProblemStatement {
         }
         return  head;
     }
+
+
 
 }

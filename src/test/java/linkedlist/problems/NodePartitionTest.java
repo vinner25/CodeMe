@@ -19,7 +19,5 @@ public class NodePartitionTest {
         Assert.assertEquals(2, partitionNode.getNext().getValue());
         Assert.assertEquals(3, partitionNode. getNext().getNext().getValue());
         Assert.assertEquals(10, partitionNode.getNext().getNext().getNext().getValue());
-
     }
-
 }
