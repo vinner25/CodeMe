@@ -32,11 +32,10 @@ public class CoinChange implements ProblemStatement {
             return 0;
 
         int[] dp = new int[amount+1];
-        Arrays.fill(dp, amount+1);
+        Arrays.fill(dp, amount+1); //Keep Maximum value as dummy value so that when we min this gets replaced with real min value;
         dp[0] = 0;
         for(int i= 1; i<= amount; i++)
         {
-
             for(int coin : coins)
             {
                 if(i >= coin)
