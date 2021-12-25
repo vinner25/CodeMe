@@ -1,8 +1,7 @@
 package trees.problems;
 
-import com.vinner.codeme.ds.trees.BinaryTreeNode;
-import com.vinner.codeme.ds.trees.problems.CommonAncestor;
-import com.vinner.codeme.leetcode.ValidBST;
+import com.vinner.codeme.ctci.ds.trees.BinaryTreeNode;
+import com.vinner.codeme.ctci.ds.trees.problems.CommonAncestor;
 import org.junit.Assert;
 import org.junit.Test;
 

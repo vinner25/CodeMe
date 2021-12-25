@@ -1,8 +1,8 @@
 package linkedlist.problems;
 
-import com.vinner.codeme.ds.linkedlist.LinkedListNode;
-import com.vinner.codeme.ds.linkedlist.LinkedListUtil;
-import com.vinner.codeme.ds.linkedlist.problems.DeleteMiddleHead;
+import com.vinner.codeme.ctci.ds.linkedlist.LinkedListNode;
+import com.vinner.codeme.ctci.ds.linkedlist.LinkedListUtil;
+import com.vinner.codeme.ctci.ds.linkedlist.problems.DeleteMiddleHead;
 import org.junit.Assert;
 import org.junit.Test;
 

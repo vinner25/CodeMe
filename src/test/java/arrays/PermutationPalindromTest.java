@@ -1,6 +1,6 @@
 package arrays;
 
-import com.vinner.codeme.ds.arrays_and_strings.PermutationPalindrom;
+import com.vinner.codeme.ctci.ds.arrays_and_strings.PermutationPalindrom;
 import org.junit.Assert;
 import org.junit.Test;
 

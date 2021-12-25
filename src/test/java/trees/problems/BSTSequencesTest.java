@@ -1,14 +1,12 @@
 package trees.problems;
 
-import com.vinner.codeme.ds.trees.problems.BSTSequences;
-import com.vinner.codeme.ds.trees.problems.TreeNode;
+import com.vinner.codeme.ctci.ds.trees.problems.BSTSequences;
+import com.vinner.codeme.ctci.ds.trees.problems.TreeNode;
 import org.junit.Assert;
 import org.junit.Test;
-import sun.reflect.generics.tree.Tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class BSTSequencesTest {
 

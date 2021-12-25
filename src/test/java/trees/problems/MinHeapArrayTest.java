@@ -1,6 +1,6 @@
 package trees.problems;
 
-import com.vinner.codeme.ds.trees.problems.MinHeapArray;
+import com.vinner.codeme.ctci.ds.trees.problems.MinHeapArray;
 import org.junit.Assert;
 import org.junit.Test;
 

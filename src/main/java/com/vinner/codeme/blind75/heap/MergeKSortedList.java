@@ -1,7 +1,6 @@
 package com.vinner.codeme.blind75.heap;
 
 import com.vinner.codeme.ProblemStatement;
-import com.vinner.codeme.ds.linkedlist.LinkedListNode;
 
 import java.util.ArrayList;
 import java.util.Collections;

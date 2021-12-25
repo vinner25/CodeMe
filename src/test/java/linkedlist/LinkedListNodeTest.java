@@ -1,7 +1,7 @@
 package linkedlist;
 
-import com.vinner.codeme.ds.linkedlist.LinkedListNode;
-import com.vinner.codeme.ds.linkedlist.LinkedListUtil;
+import com.vinner.codeme.ctci.ds.linkedlist.LinkedListNode;
+import com.vinner.codeme.ctci.ds.linkedlist.LinkedListUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

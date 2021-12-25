@@ -1,6 +1,6 @@
 package trees.problems;
 
-import com.vinner.codeme.ds.trees.problems.ValidBST;
+import com.vinner.codeme.ctci.ds.trees.problems.ValidBST;
 import org.junit.Assert;
 import org.junit.Test;
 import trees.util.BinaryTreeUtil;
