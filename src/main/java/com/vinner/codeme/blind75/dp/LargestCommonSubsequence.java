@@ -36,7 +36,7 @@ public class LargestCommonSubsequence implements ProblemStatement {
         {
             for(int j=1; j <  dp[0].length; j++)
             {
-                if(s1.charAt(i-1) == s2.charAt(j-1))
+                if(s1.charAt(i-1) == s2.charAt(j-1)) //Since DP rows and columns are one greater than original stringso current character to be compared is 1 minus
                 {
                     dp[i][j] = dp[i-1][j-1] + 1;
                 }
@@ -51,34 +51,37 @@ public class LargestCommonSubsequence implements ProblemStatement {
     }
 
 
-    private int findLcs(String s1, String s2, int i, int j)
+    private int findLcsRecurive(String s1, String s2, int i, int j)
     {
         if(i<0 || j <0)
             return 0;
 
         if(s1.charAt(i) == s2.charAt(j))
-            return  1+ findLcs(s1, s2, i-1, j-1);
+            return  1+ findLcsRecurive(s1, s2, i-1, j-1);
 
         else
-            return Math.max(findLcs(s1, s2, i-1, j), findLcs(s1, s2, i, j-1));
+            return Math.max(findLcsRecurive(s1, s2, i-1, j), findLcsRecurive(s1, s2, i, j-1));
     }
-
-
 
 
 
     @Override
     public String getSolutionNotes() {
-        return ProblemStatement.super.getSolutionNotes();
+        return  "This solution is a classic problem which use Dynamic programming to reach to the results. If you want to look at the sub-problem of this one" +
+                "look for findLcRecurive() in this class. " +
+                "For Details : https://www.youtube.com/watch?v=ASoaQq66foQ ";
+
+
+
     }
 
     @Override
     public String getTimeComplexity() {
-        return ProblemStatement.super.getTimeComplexity();
+        return "O(m*n) - M is length of String s1 and N is length of String S2";
     }
 
     @Override
     public String getSpaceComplexity() {
-        return ProblemStatement.super.getSpaceComplexity();
+        return "O(m*n)";
     }
 }

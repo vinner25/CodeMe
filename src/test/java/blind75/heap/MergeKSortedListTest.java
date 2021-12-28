@@ -1,6 +1,6 @@
 package blind75.heap;
 
-import com.vinner.codeme.blind75.heap.ListNode;
+import com.vinner.codeme.common.ListNode;
 import com.vinner.codeme.blind75.heap.MergeKSortedList;
 import org.junit.Assert;
 import org.junit.Test;
