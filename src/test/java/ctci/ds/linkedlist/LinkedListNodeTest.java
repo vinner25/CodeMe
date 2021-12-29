@@ -1,4 +1,4 @@
-package linkedlist;
+package ctci.ds.linkedlist;
 
 import com.vinner.codeme.ctci.ds.linkedlist.LinkedListNode;
 import com.vinner.codeme.ctci.ds.linkedlist.LinkedListUtil;

@@ -1,4 +1,4 @@
-package arrays;
+package ctci.ds.arrays;
 
 import com.vinner.codeme.ctci.ds.arrays_and_strings.StringRotation;
 import org.junit.Assert;

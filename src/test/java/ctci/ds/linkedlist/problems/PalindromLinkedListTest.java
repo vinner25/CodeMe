@@ -1,4 +1,4 @@
-package linkedlist.problems;
+package ctci.ds.linkedlist.problems;
 
 import com.vinner.codeme.ctci.ds.linkedlist.LinkedListUtil;
 import com.vinner.codeme.ctci.ds.linkedlist.problems.PalindromLinkedList;
