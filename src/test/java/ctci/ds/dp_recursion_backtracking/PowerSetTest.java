@@ -1,10 +1,9 @@
-package ctci.ds.dp;
+package ctci.ds.dp_recursion_backtracking;
 
-import com.vinner.codeme.ctci.ds.dp.PowerSet;
+import com.vinner.codeme.ctci.ds.dp_recusrion_backtracking.PowerSet;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PowerSetTest {
