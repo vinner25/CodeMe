@@ -1,15 +1,8 @@
 package com.vinner.codeme.projecteuler;
 
-public class PalindromProduct {
+import com.vinner.codeme.ProblemStatement;
 
-    public final String desc = "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.\n" +
-            "\n" +
-            "Find the largest palindrome made from the product of two 3-digit numbers.";
-
-    public int execute()
-    {
-        return  getPalindromProduct();
-    }
+public class PalindromProduct implements ProblemStatement {
 
     public int getPalindromProduct()
     {
@@ -64,4 +57,25 @@ public class PalindromProduct {
         return true;
     }
 
+    @Override
+    public String getDescription() {
+        return "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.\\n\" +\n" +
+                "            \"\\n\" +\n" +
+                "            \"Find the largest palindrome made from the product of two 3-digit numbers.";
+    }
+
+    @Override
+    public String getSolutionNotes() {
+        return ProblemStatement.super.getSolutionNotes();
+    }
+
+    @Override
+    public String getTimeComplexity() {
+        return ProblemStatement.super.getTimeComplexity();
+    }
+
+    @Override
+    public String getSpaceComplexity() {
+        return ProblemStatement.super.getSpaceComplexity();
+    }
 }

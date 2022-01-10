@@ -1,10 +1,41 @@
 package com.vinner.codeme.ctci.ds.trees.problems;
 
+import com.vinner.codeme.ProblemStatement;
+
 /**
  *  Given node of Binary Search Tree, find the next Successor in InOrder Traversal. For this Question that the node knows its parent.
  *
  */
-public class SuccessorBST{
+public class SuccessorBST implements ProblemStatement {
+
+    @Override
+    public String getDescription() {
+        return " Given node of Binary Search Tree, find the next Successor in InOrder Traversal. For this Question that the node knows its parent.";
+    }
+
+    @Override
+    public String getSolutionNotes() {
+        return " /**\n" +
+                "     * We know that in a BST the InOrder Traversal returns a sorted Array. So we can use that but for that we have to traverse\n" +
+                "     * the complete tree of N Nodes which will yield Time Complexity of O(n). then in the array find the next element after node we value we are inetersetd in\n" +
+                "     *\n" +
+                "     * Other way round is , we know in a BST, the next element can either be the Left most element of the right subtree or\n" +
+                "     * the parent of the current node . This will have Time Complexity of O(H) depending on the node we are looking in which will definitely\n" +
+                "     * be less than O(n).\n" +
+                "     * @param node\n" +
+                "     * @return\n" +
+                "     */";
+    }
+
+    @Override
+    public String getTimeComplexity() {
+        return ProblemStatement.super.getTimeComplexity();
+    }
+
+    @Override
+    public String getSpaceComplexity() {
+        return ProblemStatement.super.getSpaceComplexity();
+    }
 
     static class Tree{
         int value;
@@ -14,16 +45,7 @@ public class SuccessorBST{
 
     }
 
-    /**
-     * We know that in a BST the InOrder Traversal returns a sorted Array. So we can use that but for that we have to traverse
-     * the complete tree of N Nodes which will yield Time Complexity of O(n). then in the array find the next element after node we value we are inetersetd in
-     *
-     * Other way round is , we know in a BST, the next element can either be the Left most element of the right subtree or
-     * the parent of the current node . This will have Time Complexity of O(H) depending on the node we are looking in which will definitely
-     * be less than O(n).
-     * @param node
-     * @return
-     */
+
     public Tree getSuccessor(Tree node)
     {
 
@@ -73,7 +95,7 @@ public class SuccessorBST{
 
     }
 
-    public static  void main(String args[])
+   /* public static  void main(String args[])
     {
         Tree root = new Tree();
         root.value = 18;
@@ -155,7 +177,7 @@ public class SuccessorBST{
           System.out.println(successorBST.getSuccessor(secondRight).value); //  28;
 
         System.out.println(successorBST.getSuccessor(secondRight_right)); // Null
-    }
+    }*/
 
 
 
