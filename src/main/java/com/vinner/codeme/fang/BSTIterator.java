@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BSTIterator implements ProblemStatement {
+
     @Override
     public String getDescription() {
         return "Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):\n" +

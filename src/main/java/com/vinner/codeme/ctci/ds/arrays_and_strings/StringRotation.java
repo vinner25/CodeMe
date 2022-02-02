@@ -1,4 +1,7 @@
 package com.vinner.codeme.ctci.ds.arrays_and_strings;
+
+import com.vinner.codeme.ProblemStatement;
+
 /**
  *  You are given a method isSubstring() which checks whether a string is part of another String.
  *  Find if String s2 is rotation of String s1 by only using one call to isSubstring() method
@@ -6,7 +9,7 @@ package com.vinner.codeme.ctci.ds.arrays_and_strings;
  *
  *
  */
-public class StringRotation {
+public class StringRotation implements ProblemStatement {
 
     /*
      We will just double the length of STring s2 and then S2 should be part of S1 if it is rotated.
@@ -31,5 +34,27 @@ public class StringRotation {
     }
 
 
+    @Override
+    public String getDescription() {
+        return "*  You are given a method isSubstring() which checks whether a string is part of another String.\n" +
+                " *  Find if String s2 is rotation of String s1 by only using one call to isSubstring() method\n" +
+                " *  Eg : erbottlewat is a rotation of waterbottle\n" +
+                " *\n" +
+                " *";
+    }
 
+    @Override
+    public String getSolutionNotes() {
+        return ProblemStatement.super.getSolutionNotes();
+    }
+
+    @Override
+    public String getTimeComplexity() {
+        return ProblemStatement.super.getTimeComplexity();
+    }
+
+    @Override
+    public String getSpaceComplexity() {
+        return ProblemStatement.super.getSpaceComplexity();
+    }
 }
