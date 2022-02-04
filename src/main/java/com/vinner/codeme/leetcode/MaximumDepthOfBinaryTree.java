@@ -1,11 +1,33 @@
 package com.vinner.codeme.leetcode;
 
+import com.vinner.codeme.ProblemStatement;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
-public class MaximumDepthOfBinaryTree {
+public class MaximumDepthOfBinaryTree implements ProblemStatement {
+    @Override
+    public String getDescription() {
+        return "Write an algorithm to find maximum depth of a Binary Tree";
+    }
+
+    @Override
+    public String getSolutionNotes() {
+        return ProblemStatement.super.getSolutionNotes();
+    }
+
+    @Override
+    public String getTimeComplexity() {
+        return ProblemStatement.super.getTimeComplexity();
+    }
+
+    @Override
+    public String getSpaceComplexity() {
+        return ProblemStatement.super.getSpaceComplexity();
+    }
+
     public class TreeNode {
         int val;
         TreeNode left;

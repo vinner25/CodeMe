@@ -1,11 +1,13 @@
 package com.vinner.codeme.ctci.ds.arrays_and_strings;
 
+import com.vinner.codeme.ProblemStatement;
+
 /**
  *  Write an algo to determine if a string has all unique characters
  *  What is you cannot use any data structure
  *
  */
-public class UniqueString {
+public class UniqueString  implements ProblemStatement {
 
     /**
      *  Time COmplexity : O(n)
@@ -61,13 +63,24 @@ public class UniqueString {
 
     }
 
-    public static void main(String args[])
-    {
-        UniqueString us = new UniqueString();
-        System.out.println(us.isUnique("acvblpzl"));
-        System.out.println(us.isUnique("vinay"));
+    @Override
+    public String getDescription() {
+        return "  Write an algo to determine if a string has all unique characters\n" +
+                " *  What is you cannot use any data structure";
+    }
 
-        System.out.println(us.isUniqueNoDataStructure("acvblpzl"));
-        System.out.println(us.isUniqueNoDataStructure("anvauipo"));
+    @Override
+    public String getSolutionNotes() {
+        return ProblemStatement.super.getSolutionNotes();
+    }
+
+    @Override
+    public String getTimeComplexity() {
+        return ProblemStatement.super.getTimeComplexity();
+    }
+
+    @Override
+    public String getSpaceComplexity() {
+        return ProblemStatement.super.getSpaceComplexity();
     }
 }
