@@ -119,7 +119,7 @@ public class LetterCombinationsOfPhoneNumber implements ProblemStatement {
             result.add(currentString);
             return;
         }
-        char[] chars = dictionary[digits.charAt(currentIndex) - '0'].toCharArray();
+        char[] chars = dictionary[digits.charAt(currentIndex) - '0' ].toCharArray();
 
         for(char c : chars)
         {

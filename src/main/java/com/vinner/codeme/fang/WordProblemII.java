@@ -40,10 +40,10 @@ public class WordProblemII implements ProblemStatement {
         return wordBreakHelper(s, 0, hs, hm);
     }
 
-    private List<String> wordBreakHelper(String s, int start, HashSet<String> dict, HashMap<Integer, List<String>> hm ) {
+    private List<String> wordBreakHelper(String s, int start, HashSet<String> dict, HashMap<Integer, List<String>> dp ) {
 
-        if (hm.containsKey(start))
-            return hm.get(start);
+        if (dp.containsKey(start))
+            return dp.get(start);
 
         List<String> validSubstr = new ArrayList<>();
 
@@ -53,13 +53,13 @@ public class WordProblemII implements ProblemStatement {
         for (int end = start + 1; end <= s.length(); end++) {
             String prefix = s.substring(start, end);
             if (dict.contains(prefix)) {
-                List<String> suffixes = wordBreakHelper(s, end, dict, hm);
+                List<String> suffixes = wordBreakHelper(s, end, dict, dp);
                 for (String suffix : suffixes)
                     validSubstr.add(prefix + (suffix.equals("") ? "" : " ") + suffix);
             }
         }
 
-        hm.put(start, validSubstr);
+        dp.put(start, validSubstr);
         return validSubstr;
     }
 

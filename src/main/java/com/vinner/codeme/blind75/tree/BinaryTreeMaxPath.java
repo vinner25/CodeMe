@@ -23,7 +23,7 @@ public class BinaryTreeMaxPath implements ProblemStatement {
                 "Output: 42\n" +
                 "Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.";
     }
-    private int maxSum = Integer.MIN_VALUE; //Initialize Maimum Path sum to be least value
+    private int maxSum = Integer.MIN_VALUE; //Initialize Maximum Path sum to be least value
     public int maxPathSum(TreeNode root) {
         maxSum(root);
         return maxSum;

@@ -60,7 +60,7 @@ public class CoinChange implements ProblemStatement {
 
     @Override
     public String getTimeComplexity() {
-        return "O(A*N) - A is the amount given and C is the number of coins. For any amount we iterate till A amount max and use Maximum C number of coins";
+        return "O(A*C) - A is the amount given and C is the number of coins. For any amount we iterate till A amount max and use Maximum C number of coins";
     }
 
     @Override

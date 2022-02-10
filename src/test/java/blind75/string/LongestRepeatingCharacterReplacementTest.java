@@ -12,7 +12,7 @@ public class LongestRepeatingCharacterReplacementTest {
     public void testReplaceCharacters()
     {
      //    Assert.assertEquals(4, lr.characterReplacement("ABAB", 2));
-         Assert.assertEquals(4, lr.characterReplacement("AABABBA", 1));
+         Assert.assertEquals(5, lr.characterReplacement("ABABACC", 2));
 //
     }
 }
