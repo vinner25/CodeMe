@@ -1,10 +1,9 @@
 package com.vinner.codeme.blind75.heap;
 
 import com.vinner.codeme.ProblemStatement;
+import jdk.nashorn.internal.runtime.arrays.IntElements;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class TopKFrequentElements implements ProblemStatement {
     @Override
@@ -20,6 +19,15 @@ public class TopKFrequentElements implements ProblemStatement {
                 "Input: nums = [1], k = 1\n" +
                 "Output: [1]";
     }
+    class Element{
+        int number;
+        int frequency;
+
+
+    }
+
+
+
     public int[] topKFrequent(int[] nums, int k) {
 
         Map<Integer,Integer> valueToCountMap = new HashMap<>();
@@ -32,14 +40,30 @@ public class TopKFrequentElements implements ProblemStatement {
             valueToCountMap.put(nums[i], count);
 
         }
-        // We will create the heap and implement comparator based on count of values in Map
-        // so that the minimum value stays at the top of the heap
-        PriorityQueue<Integer> queue = new PriorityQueue<Integer>(
-                (n1,n2) -> valueToCountMap.get(n1) - valueToCountMap.get(n2) );
 
-        for(Integer key : valueToCountMap.keySet())
+        List<Element> elements = new ArrayList<>();
+        for(int key : valueToCountMap.keySet())
         {
-            queue.add(key);
+            Element element = new Element();
+            element.number = key;
+            element.frequency = valueToCountMap.get(key);
+            elements.add(element);
+        }
+
+        // We will create the heap and implement comparator based on count of values in Map
+        // so that the minimum value stays at the top of the heap. Alternatively we can also implement a max heap
+        // which means we have to store all the elements and then choose top K
+        PriorityQueue<Element> queue = new PriorityQueue<Element>(
+                new Comparator<Element>() {
+                    @Override
+                    public int compare(Element o1, Element o2) {
+                        return o1.frequency - o2.frequency; //Means if 01.fre - o2.fr > 1 , it will swap. Means the element with less freq stays at top
+                    }
+                });
+
+        for(Element element : elements)
+        {
+            queue.add(element);
             if(queue.size() > k) //If the Heap becomes more than asked K chop of the top value which will be minimum
                 queue.poll();
         }
@@ -48,7 +72,7 @@ public class TopKFrequentElements implements ProblemStatement {
 
         while(k>0)
         {
-            res[res.length-k] =  queue.poll();
+            res[res.length-k] =  queue.poll().number;
             k--;
         }
         return res;

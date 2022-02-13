@@ -1,10 +1,31 @@
 package com.vinner.codeme.ctci.ds.trees.problems;
 
+import com.vinner.codeme.ProblemStatement;
 import com.vinner.codeme.ctci.ds.trees.BinaryTreeNode;
 import com.vinner.codeme.ctci.ds.trees.BinaryTreeUtil;
 
-public class BalancedBinaryTree {
-class SubTreeDetails{
+public class BalancedBinaryTree implements ProblemStatement {
+    @Override
+    public String getDescription() {
+        return "Write an algorithm to verify if a Binary Tree is Balanced or Not?";
+    }
+
+    @Override
+    public String getSolutionNotes() {
+        return ProblemStatement.super.getSolutionNotes();
+    }
+
+    @Override
+    public String getTimeComplexity() {
+        return ProblemStatement.super.getTimeComplexity();
+    }
+
+    @Override
+    public String getSpaceComplexity() {
+        return ProblemStatement.super.getSpaceComplexity();
+    }
+
+    class SubTreeDetails{
 
     private boolean balanced;
     private int height;
@@ -60,16 +81,5 @@ class SubTreeDetails{
     }
 
 
-    public static  void main(String args[])
-    {
-        BalancedBinaryTree balancedBinaryTree = new BalancedBinaryTree();
-
-        BinaryTreeNode<Integer> binaryTreeNode = BinaryTreeUtil.generateIntegerBinaryTree();
-
-        System.out.println(balancedBinaryTree.isBalanced(binaryTreeNode));
-        System.out.println(balancedBinaryTree.isBalanced( BinaryTreeUtil.generateUnBalancedIntegerBinaryTree()));
-
-
-    }
 
 }

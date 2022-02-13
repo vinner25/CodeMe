@@ -5,7 +5,7 @@ import com.vinner.codeme.ProblemStatement;
 public class CheckSubTree implements ProblemStatement {
     @Override
     public String getDescription() {
-        return  null;
+       return "Given two TreeNode, check if the second Tree is the subTree of the first";
     }
 
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {

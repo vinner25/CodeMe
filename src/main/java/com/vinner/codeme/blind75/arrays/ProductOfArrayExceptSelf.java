@@ -2,7 +2,7 @@ package com.vinner.codeme.blind75.arrays;
 
 import com.vinner.codeme.ProblemStatement;
 
-class ProductOfArrayExceptSelf implements ProblemStatement {
+public class ProductOfArrayExceptSelf implements ProblemStatement {
     public int[] productExceptSelf(int[] nums) {
         int[] output = new int[nums.length];
         int leftProduct = 1;

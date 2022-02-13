@@ -1,11 +1,13 @@
 package com.vinner.codeme.leetcode;
 
+import com.vinner.codeme.ProblemStatement;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PlantFlowersInGarden {
+public class PlantFlowersInGarden implements ProblemStatement {
 
     public int[] gardenNoAdj(int n, int[][] paths) {
         int[] placements = new int[n];
@@ -27,7 +29,7 @@ public class PlantFlowersInGarden {
 
     private void placeFlowersToNeighbors(int[] placements, int flowerNumber, Map<Integer,List<Integer>> graph, int currentGarden)
     {
-        if(flowerNumber > 4 || graph.get(currentGarden) == null)
+        if( graph.get(currentGarden) == null)
         {
             return;
         }
@@ -100,5 +102,49 @@ public class PlantFlowersInGarden {
 
         return graph;
 
+    }
+
+    @Override
+    public String getDescription() {
+        return "You have n gardens, labeled from 1 to n, and an array paths where paths[i] = [xi, yi] describes a bidirectional path between garden xi to garden yi. In each garden, you want to plant one of 4 types of flowers.\n" +
+                "\n" +
+                "All gardens have at most 3 paths coming into or leaving it.\n" +
+                "\n" +
+                "Your task is to choose a flower type for each garden such that, for any two gardens connected by a path, they have different types of flowers.\n" +
+                "\n" +
+                "Return any such a choice as an array answer, where answer[i] is the type of flower planted in the (i+1)th garden. The flower types are denoted 1, 2, 3, or 4. It is guaranteed an answer exists.\n" +
+                "\n" +
+                "Example 1:\n" +
+                "\n" +
+                "Input: n = 3, paths = [[1,2],[2,3],[3,1]]\n" +
+                "Output: [1,2,3]\n" +
+                "Explanation:\n" +
+                "Gardens 1 and 2 have different types.\n" +
+                "Gardens 2 and 3 have different types.\n" +
+                "Gardens 3 and 1 have different types.\n" +
+                "Hence, [1,2,3] is a valid answer. Other valid answers include [1,2,4], [1,4,2], and [3,2,1].\n" +
+                "Example 2:\n" +
+                "\n" +
+                "Input: n = 4, paths = [[1,2],[3,4]]\n" +
+                "Output: [1,2,1,2]\n" +
+                "Example 3:\n" +
+                "\n" +
+                "Input: n = 4, paths = [[1,2],[2,3],[3,4],[4,1],[1,3],[2,4]]\n" +
+                "Output: [1,2,3,4]";
+    }
+
+    @Override
+    public String getSolutionNotes() {
+        return ProblemStatement.super.getSolutionNotes();
+    }
+
+    @Override
+    public String getTimeComplexity() {
+        return ProblemStatement.super.getTimeComplexity();
+    }
+
+    @Override
+    public String getSpaceComplexity() {
+        return ProblemStatement.super.getSpaceComplexity();
     }
 }
