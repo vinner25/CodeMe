@@ -2,8 +2,7 @@ package com.vinner.codeme.blind75.interval;
 
 import com.vinner.codeme.ProblemStatement;
 
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.*;
 
 public class MergeInterval implements ProblemStatement {
     @Override
@@ -28,8 +27,49 @@ public class MergeInterval implements ProblemStatement {
                 "\n Keep on expanding the last Inserted Interval into the linkedList until you reach a non overlapping interval";
     }
 
-
     public int[][] merge(int[][] intervals) {
+
+        Arrays.sort(intervals, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] a, int[] b) {
+                if(a[0] > b[0])
+                    return 1;
+                else if(a[0] < b[0])
+                    return -1;
+                return 0;
+            }
+        });
+
+        List<int[]> intervalList = new ArrayList<>();
+        int[] currentInterval = intervals[0];
+
+        for( int i = 1; i < intervals.length; i++)
+        {
+            int[] runningInterval = intervals[i];
+
+            if(runningInterval[0] <= currentInterval[1]) // If Running Interval Start TIme is Before/Equal to previos Interval then Merge
+            {
+                currentInterval[1] = Math.max(currentInterval[1], runningInterval[1]);
+
+            }
+            else{ //Add to List - Means Interval is exclusive to previous
+
+                intervalList.add(currentInterval);
+                currentInterval = runningInterval;
+            }
+
+
+        }
+        intervalList.add(currentInterval); //Add Remaining in the end
+        int[][] res = new int[intervalList.size()][2];
+        int index=0;
+        for( int[] intrvl : intervalList)
+            res[index++] = intrvl;
+
+        return res;
+    }
+
+   /* public int[][] merge(int[][] intervals) {
 
         if(intervals == null || intervals.length == 0)
             return new int[0][];
@@ -55,7 +95,7 @@ public class MergeInterval implements ProblemStatement {
 
         }
         return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
-    }
+    }*/
 
     @Override
     public String getTimeComplexity() {
